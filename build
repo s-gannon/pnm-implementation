@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd src
+gcc -Wall -Wextra -pedantic -std=c99 -c pnm.c
+ar -rcs libpnm.a pnm.o
+
+cd ..
+mv src/libpnm.a lib/
