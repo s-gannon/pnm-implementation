@@ -14,10 +14,10 @@ typedef struct rgba_s{
 } rgba_t;
 
 typedef struct pnm_s{
-	uint8_t type: 3;	//type only needs 3 bits because PNM types; only 1 to 7
-	uint16_t max_val;
-	uint32_t width, height;		
-	rgba_t* data;
+	uint8_t type: 3;	//type only needs 3 bits because PNM types only go from 1 to 7
+	uint16_t max_val;	//maximum color value expected for each entry
+	uint32_t width, height;	//width and height of the image
+	rgba_t* data;		//the RGB(A) values
 } pnm_t;
 /*
 Creates an rgba_t struct given R, G, B, and A as well as the maximum value
