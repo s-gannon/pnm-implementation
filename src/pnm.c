@@ -55,7 +55,7 @@ pnm_t pnm_init(char* path){
 	getc(file);	//throw away the next whitespace char
 	fscanf(file, "%d", &image.width);
 	fscanf(file, "%d", &image.height);
-	fscanf(file, "%c", &image.max_val);
+	fscanf(file, "%hu", &image.max_val);
 
 	image.data = calloc((image.width * image.height), sizeof(rgba_t));
 	
